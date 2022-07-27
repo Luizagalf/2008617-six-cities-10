@@ -6,6 +6,5 @@ type AppProps = {
 };
 function App({ cards }: AppProps): JSX.Element {
   return <Main cards={cards} />;
-}
 
 export default App;
