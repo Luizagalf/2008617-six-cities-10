@@ -1,4 +1,4 @@
-export interface ICard {
+export type Card = {
   premium: boolean;
   src: string;
   price: number;
@@ -6,4 +6,4 @@ export interface ICard {
   bookmark: boolean;
   name: string;
   type: string;
-}
+};

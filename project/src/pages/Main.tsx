@@ -1,7 +1,11 @@
 import OneCard from '../components/OneCard';
-import { ICard } from '../types/interfaces';
+import { Card } from '../types/types';
 
-const Main = (cards: ICard[]): JSX.Element => (
+type MainProps = {
+  cards: Card[];
+};
+
+const Main = ({ cards }: MainProps): JSX.Element => (
   <div className="page page--gray page--main">
     <header className="header">
       <div className="container">
@@ -113,7 +117,7 @@ const Main = (cards: ICard[]): JSX.Element => (
             </form>
             <div className="cities__places-list places__list tabs__content">
               {cards.map((card) => (
-                <OneCard {...card} key={card.name} />
+                <OneCard card={card} key={card.name} />
               ))}
               {/* <article className="cities__card place-card">
                 <div className="place-card__mark">

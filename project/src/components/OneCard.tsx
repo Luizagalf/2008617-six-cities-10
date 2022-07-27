@@ -1,6 +1,10 @@
-import { ICard } from '../types/interfaces';
+import { Card } from '../types/types';
 
-const OneCard = (card: ICard): JSX.Element => (
+type OneCardProps = {
+  card: Card;
+};
+
+const OneCard = ({ card }: OneCardProps): JSX.Element => (
   <article className="cities__card place-card">
     {card.premium ? (
       <div className="place-card__mark">

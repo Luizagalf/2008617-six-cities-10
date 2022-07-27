@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
-import { ICard } from './types/interfaces';
+import { Card } from './types/types';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-const cards: ICard[] = [
+const cards: Card[] = [
   {
     premium: true,
     src: 'img/apartment-01.jpg',

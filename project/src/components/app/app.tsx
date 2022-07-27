@@ -1,7 +1,10 @@
 import Main from '../../pages/Main';
-import { ICard } from '../../types/interfaces';
+import { Card } from '../../types/types';
 
-function App(cards: ICard[]): JSX.Element {
+type AppProps = {
+  cards: Card[];
+};
+function App({ cards }: AppProps): JSX.Element {
   return <Main cards={cards} />;
 }
 
