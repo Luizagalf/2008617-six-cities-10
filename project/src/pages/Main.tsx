@@ -1,11 +1,11 @@
-import OneCard from '../components/OneCard';
-import { Card } from '../types/types';
+import OfferCard from '../components/offer-card';
+import { Offer } from '../types/offer';
 
 type MainProps = {
-  cards: Card[];
+  offers: Offer[];
 };
 
-const Main = ({ cards }: MainProps): JSX.Element => (
+const Main = ({ offers }: MainProps): JSX.Element => (
   <div className="page page--gray page--main">
     <header className="header">
       <div className="container">
@@ -116,8 +116,8 @@ const Main = ({ cards }: MainProps): JSX.Element => (
               </ul>
             </form>
             <div className="cities__places-list places__list tabs__content">
-              {cards.map((card) => (
-                <OneCard card={card} key={card.name} />
+              {offers.map((offer) => (
+                <OfferCard offer={offer} key={offer.id} />
               ))}
               {/* <article className="cities__card place-card">
                 <div className="place-card__mark">

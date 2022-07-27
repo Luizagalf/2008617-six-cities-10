@@ -1,4 +1,5 @@
-export type Card = {
+export type Offer = {
+  id: number;
   premium: boolean;
   src: string;
   price: number;

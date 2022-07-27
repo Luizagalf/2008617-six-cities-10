@@ -1,11 +1,9 @@
 import Main from '../../pages/Main';
-import { Card } from '../../types/types';
+import { Offer } from '../../types/offer';
 
 type AppProps = {
-  cards: Card[];
+  offers: Offer[];
 };
-function App({ cards }: AppProps): JSX.Element {
-  return <Main cards={cards} />;
-}
+const App = ({ offers }: AppProps): JSX.Element => <Main offers={offers} />;
 
 export default App;
