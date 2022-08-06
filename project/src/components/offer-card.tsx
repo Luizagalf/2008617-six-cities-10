@@ -1,10 +1,12 @@
 import { Offer } from '../types/offer';
+import { Link } from 'react-router-dom';
 
 type OfferCardProps = {
   offer: Offer;
+  isSelected?: boolean;
 };
 
-const OfferCard = ({ offer }: OfferCardProps): JSX.Element => (
+const OfferCard = ({ offer, isSelected }: OfferCardProps) => (
   <article className="cities__card place-card">
     {offer.premium ? (
       <div className="place-card__mark">
@@ -56,7 +58,13 @@ const OfferCard = ({ offer }: OfferCardProps): JSX.Element => (
         </div>
       </div>
       <h2 className="place-card__name">
-        <a href="#">{offer.name}</a>
+        <Link
+          to={{
+            pathname: `/offer/${offer['id']}`
+          }}
+        >
+          {offer.name}
+        </Link>
       </h2>
       <p className="place-card__type">{offer.type}</p>
     </div>

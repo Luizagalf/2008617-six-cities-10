@@ -10,7 +10,7 @@ import { Offer } from '../../types/offer';
 import { AppRoute } from '../../consts';
 
 type AppProps = {
-  offers: Offer[];
+  offers: { [key: string]: Offer[] };
 };
 const App = ({ offers }: AppProps): JSX.Element => (
   <BrowserRouter>
@@ -20,8 +20,8 @@ const App = ({ offers }: AppProps): JSX.Element => (
       <Route
         path={AppRoute.Favorites}
         element={
-          <PrivateRoute authorizationStatus={false}>
-            <Favorites />
+          <PrivateRoute authorizationStatus>
+            <Favorites offers={offers} />
           </PrivateRoute>
         }
       />
