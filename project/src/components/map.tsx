@@ -25,7 +25,12 @@ const currentCustomIcon = new Icon({
 
 const Map = ({ city, offers }: MapProps) => {
   const mapRef = useRef(null);
-  const map = useMap(mapRef, city);
+  const center = {
+    lat: city.lat,
+    lng: city.lng
+  };
+  const zoom = city.zoom;
+  const map = useMap(mapRef, center, zoom);
 
   // useEffect(() => {
   //   if (map) {
