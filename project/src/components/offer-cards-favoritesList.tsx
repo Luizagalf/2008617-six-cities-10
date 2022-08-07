@@ -1,5 +1,5 @@
 import { Offer } from '../types/offer';
-import { groupBy } from '../functions';
+import { groupBy } from '../utils';
 import OfferCardFavorites from './offer-card-favorites';
 
 type OfferCardsListProps = {

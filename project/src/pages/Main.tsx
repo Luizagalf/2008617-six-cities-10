@@ -1,6 +1,7 @@
 import { Offer } from '../types/offer';
 import OfferCardsList from '../components/offer-cards-list';
 import Map from '../components/map';
+import { groupBy } from '../utils';
 
 type MainProps = {
   offers: Offer[];
@@ -116,7 +117,7 @@ const Main = ({ offers }: MainProps): JSX.Element => (
                 </li>
               </ul>
             </form>
-            <OfferCardsList offers={offers} city="Amsterdam" />
+            <OfferCardsList offers={groupBy(offers, 'city')['Amsterdam']} />
           </section>
           <div className="cities__right-section">
             <Map offers={offers} city="Amsterdam" />
