@@ -1,11 +1,11 @@
 import { useEffect, useState, MutableRefObject } from 'react';
 import { Map, TileLayer } from 'leaflet';
-import { City } from '../types/types';
+import { City } from '../types/city';
 
-function useMap(
+const useMap = (
   mapRef: MutableRefObject<HTMLElement | null>,
   city: City
-): Map | null {
+): Map | null => {
   const [map, setMap] = useState<Map | null>(null);
 
   useEffect(() => {
@@ -33,6 +33,6 @@ function useMap(
   }, [mapRef, map, city]);
 
   return map;
-}
+};
 
 export default useMap;

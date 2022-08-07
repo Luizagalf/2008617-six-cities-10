@@ -4,10 +4,11 @@ import { Icon, Marker } from 'leaflet';
 import { useRef, useEffect } from 'react';
 import useMap from '../hooks/useMap';
 import { URL_MARKER_DEFAULT, URL_MARKER_CURRENT } from '../consts';
+import { City } from '../types/city';
 
 type MapProps = {
   offers: Offer[];
-  city: string;
+  city: City;
 };
 
 const defaultCustomIcon = new Icon({
@@ -30,8 +31,8 @@ const Map = ({ city, offers }: MapProps) => {
   //   if (map) {
   //     offers.forEach((point) => {
   //       const marker = new Marker({
-  //         latitude: point.latitude,
-  //         longitude: point.longitude
+  //         lat: point.lat,
+  //         lng: point.lng
   //       });
 
   //       marker
