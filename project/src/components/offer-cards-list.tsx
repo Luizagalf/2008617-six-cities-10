@@ -13,7 +13,7 @@ const OfferCardsList = ({ offers, city }: OfferCardsListProps) => {
 
   return (
     <div className="cities__places-list places__list tabs__content">
-      {groupBy(offers)[city].map((offer: Offer) => (
+      {groupBy(offers, 'city')[city].map((offer: Offer) => (
         <div
           key={offer.id}
           onMouseEnter={() => setSelectedOffer(offer.id)}
