@@ -8,4 +8,6 @@ export type Offer = {
   name: string;
   type: string;
   city: string;
+  longitude: string;
+  latitude: string;
 };

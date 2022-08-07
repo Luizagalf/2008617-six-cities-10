@@ -1,5 +1,6 @@
 import { Offer } from '../types/offer';
 import OfferCardsList from '../components/offer-cards-list';
+import Map from '../components/map';
 
 type MainProps = {
   offers: Offer[];
@@ -118,7 +119,7 @@ const Main = ({ offers }: MainProps): JSX.Element => (
             <OfferCardsList offers={offers} city="Amsterdam" />
           </section>
           <div className="cities__right-section">
-            <section className="cities__map map"></section>
+            <Map offers={offers} city="Amsterdam" />
           </div>
         </div>
       </div>

@@ -10,7 +10,9 @@ export const offers: Offer[] = [
     bookmark: false,
     name: 'Beautiful &amp; luxurious apartment at great location',
     type: 'Apartment',
-    city: 'Amsterdam'
+    city: 'Amsterdam',
+    longitude: '52.3909553943508',
+    latitude: '4.85309666406198'
   },
   {
     id: 2,
@@ -21,7 +23,9 @@ export const offers: Offer[] = [
     bookmark: true,
     name: 'Wood and stone place',
     type: 'Private room',
-    city: 'Amsterdam'
+    city: 'Amsterdam',
+    longitude: '52.369553943508',
+    latitude: '4.85309666406198'
   },
   {
     id: 3,
@@ -32,7 +36,9 @@ export const offers: Offer[] = [
     bookmark: false,
     name: 'Canal View Prinsengracht',
     type: 'Apartment',
-    city: 'Amsterdam'
+    city: 'Amsterdam',
+    longitude: '52.3909553943508',
+    latitude: '4.929309666406198'
   },
   {
     id: 4,
@@ -43,7 +49,9 @@ export const offers: Offer[] = [
     bookmark: false,
     name: 'Nice, cozy, warm big bed apartment',
     type: 'Apartment',
-    city: 'Amsterdam'
+    city: 'Amsterdam',
+    longitude: '52.3809553943508',
+    latitude: '4.939309666406198'
   },
   {
     id: 5,
@@ -54,7 +62,9 @@ export const offers: Offer[] = [
     bookmark: true,
     name: 'Wood and stone place',
     type: 'Apartment',
-    city: 'Amsterdam'
+    city: 'Amsterdam',
+    longitude: '52.3909553943508',
+    latitude: '4.85309666406198'
   },
   {
     id: 6,
@@ -65,7 +75,9 @@ export const offers: Offer[] = [
     bookmark: false,
     name: 'Nice, cozy, warm big bed apartment',
     type: 'Apartment',
-    city: 'Cologne'
+    city: 'Cologne',
+    longitude: '52.3909553943508',
+    latitude: '4.85309666406198'
   },
   {
     id: 7,
@@ -76,6 +88,8 @@ export const offers: Offer[] = [
     bookmark: true,
     name: 'Wood and stone place',
     type: 'Apartment',
-    city: 'Cologne'
+    city: 'Cologne',
+    longitude: '52.3909553943508',
+    latitude: '4.85309666406198'
   }
 ];
