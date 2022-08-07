@@ -7,4 +7,5 @@ export type Offer = {
   bookmark: boolean;
   name: string;
   type: string;
+  city: string;
 };

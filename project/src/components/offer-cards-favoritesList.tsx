@@ -1,13 +1,14 @@
 import { Offer } from '../types/offer';
+import { groupBy } from '../functions';
 import OfferCardFavorites from './offer-card-favorites';
 
 type OfferCardsListProps = {
-  offers: { [key: string]: Offer[] };
+  offers: Offer[];
 };
 
 const OfferCardsListFavorites = ({ offers }: OfferCardsListProps) => (
   <ul className="favorites__list">
-    {Object.entries(offers).map(([key, value]) => (
+    {Object.entries(groupBy(offers)).map(([key, value]) => (
       <li className="favorites__locations-items" key={key}>
         <div className="favorites__locations locations locations--current">
           <div className="locations__item">
@@ -18,7 +19,7 @@ const OfferCardsListFavorites = ({ offers }: OfferCardsListProps) => (
         </div>
         <div className="favorites__places">
           {value.map(
-            (item) =>
+            (item: Offer) =>
               item.bookmark && (
                 <OfferCardFavorites offer={item} key={item['id']} />
               )

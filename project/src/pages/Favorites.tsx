@@ -2,7 +2,7 @@ import OfferCardsListFavorites from '../components/offer-cards-favoritesList';
 import { Offer } from '../types/offer';
 
 type FavoritesProps = {
-  offers: { [key: string]: Offer[] };
+  offers: Offer[];
 };
 
 const Favorites = ({ offers }: FavoritesProps): JSX.Element => (

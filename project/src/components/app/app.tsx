@@ -1,16 +1,16 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import PrivateRoute from '../private-route/private-route';
-import Main from '../../pages/Main';
-import Login from '../../pages/Login';
-import Favorites from '../../pages/Favorites';
-import OfferPage from '../../pages/OfferPage';
-import Error from '../../pages/Error';
+import Main from '../../pages/main';
+import Login from '../../pages/login';
+import Favorites from '../../pages/favorites';
+import OfferPage from '../../pages/offer-page';
+import Error from '../../pages/error';
 import { Offer } from '../../types/offer';
 
 import { AppRoute } from '../../consts';
 
 type AppProps = {
-  offers: { [key: string]: Offer[] };
+  offers: Offer[];
 };
 const App = ({ offers }: AppProps): JSX.Element => (
   <BrowserRouter>

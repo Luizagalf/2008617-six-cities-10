@@ -2,7 +2,7 @@ import { Offer } from '../types/offer';
 import OfferCardsList from '../components/offer-cards-list';
 
 type MainProps = {
-  offers: { [key: string]: Offer[] };
+  offers: Offer[];
 };
 
 const Main = ({ offers }: MainProps): JSX.Element => (

@@ -1,17 +1,19 @@
 import { Offer } from '../types/offer';
 import OfferCard from '../components/offer-card';
 import { useState } from 'react';
+import { groupBy } from '../functions';
 
 type OfferCardsListProps = {
-  offers: { [key: string]: Offer[] };
+  offers: Offer[];
   city: string;
 };
 
 const OfferCardsList = ({ offers, city }: OfferCardsListProps) => {
   const [selectedOffer, setSelectedOffer] = useState(0);
+
   return (
     <div className="cities__places-list places__list tabs__content">
-      {offers[city].map((offer) => (
+      {groupBy(offers)[city].map((offer: Offer) => (
         <div
           key={offer.id}
           onMouseEnter={() => setSelectedOffer(offer.id)}
