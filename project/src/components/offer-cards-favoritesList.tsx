@@ -8,7 +8,7 @@ type OfferCardsListProps = {
 
 const OfferCardsListFavorites = ({ offers }: OfferCardsListProps) => (
   <ul className="favorites__list">
-    {Object.entries(groupBy(offers)).map(([key, value]) => (
+    {Object.entries(groupBy(offers, 'city')).map(([key, value]) => (
       <li className="favorites__locations-items" key={key}>
         <div className="favorites__locations locations locations--current">
           <div className="locations__item">
