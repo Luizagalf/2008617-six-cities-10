@@ -27,7 +27,7 @@ const useMap = (
 
       setMap(instance);
     }
-  }, [mapRef, map, { center, zoom }]);
+  }, [mapRef, map, center, zoom]);
 
   return map;
 };

@@ -4,9 +4,10 @@ import { useState } from 'react';
 
 type OfferCardsListProps = {
   offers: Offer[];
+  onListItemHover: (arg: string | undefined) => void;
 };
 
-const OfferCardsList = ({ offers }: OfferCardsListProps) => {
+const OfferCardsList = ({ offers, onListItemHover }: OfferCardsListProps) => {
   const [selectedOffer, setSelectedOffer] = useState(0);
 
   return (
@@ -14,8 +15,14 @@ const OfferCardsList = ({ offers }: OfferCardsListProps) => {
       {offers.map((offer: Offer) => (
         <div
           key={offer.id}
-          onMouseEnter={() => setSelectedOffer(offer.id)}
-          onMouseLeave={() => setSelectedOffer(offer.id)}
+          onMouseEnter={() => {
+            setSelectedOffer(offer.id);
+            onListItemHover(offer.name);
+          }}
+          onMouseLeave={() => {
+            setSelectedOffer(offer.id);
+            onListItemHover(undefined);
+          }}
         >
           <OfferCard offer={offer} isSelected={selectedOffer === offer.id} />
         </div>

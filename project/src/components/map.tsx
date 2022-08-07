@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Offer } from '../types/offer';
 import { Icon, Marker } from 'leaflet';
 import { useRef, useEffect } from 'react';
@@ -9,6 +8,7 @@ import { City } from '../types/city';
 type MapProps = {
   offers: Offer[];
   city: City;
+  selectedOffer: Offer | undefined;
 };
 
 const defaultCustomIcon = new Icon({
@@ -23,7 +23,7 @@ const currentCustomIcon = new Icon({
   iconAnchor: [20, 40]
 });
 
-const Map = ({ city, offers }: MapProps) => {
+const Map = ({ city, offers, selectedOffer }: MapProps) => {
   const mapRef = useRef(null);
   const center = {
     lat: city.lat,
@@ -32,26 +32,30 @@ const Map = ({ city, offers }: MapProps) => {
   const zoom = city.zoom;
   const map = useMap(mapRef, center, zoom);
 
-  // useEffect(() => {
-  //   if (map) {
-  //     offers.forEach((point) => {
-  //       const marker = new Marker({
-  //         lat: point.lat,
-  //         lng: point.lng
-  //       });
+  useEffect(() => {
+    if (map) {
+      offers.forEach((offer) => {
+        const marker = new Marker({
+          lat: offer.lat,
+          lng: offer.lng
+        });
 
-  //       marker
-  //         .setIcon(
-  //           selectedPoint !== undefined && point.title === selectedPoint.title
-  //             ? currentCustomIcon
-  //             : defaultCustomIcon
-  //         )
-  //         .addTo(map);
-  //     });
-  //   }
-  // }, [map, points, selectedPoint]);
+        marker
+          .setIcon(
+            selectedOffer !== undefined && offer.name === selectedOffer.name
+              ? currentCustomIcon
+              : defaultCustomIcon
+          )
+          .addTo(map);
+      });
+    }
+  }, [map, offers]);
 
-  return <div style={{ height: '500px' }} ref={mapRef}></div>;
+  return map ? (
+    <div style={{ height: '500px' }} ref={mapRef}></div>
+  ) : (
+    <div></div>
+  );
 };
 
 export default Map;
