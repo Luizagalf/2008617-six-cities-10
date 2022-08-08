@@ -1,4 +1,4 @@
-import Comment from '../components/comment';
+import Comment from '../components/comment/comment';
 
 const OfferPage = (): JSX.Element => (
   <div className="page">

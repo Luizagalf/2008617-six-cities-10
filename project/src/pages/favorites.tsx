@@ -1,4 +1,4 @@
-import OfferCardsListFavorites from '../components/offer-cards-favoritesList';
+import OfferCardsListFavorites from '../components/offer-cards-favoritesList/offer-cards-favoritesList';
 import { Offer } from '../types/offer';
 
 type FavoritesProps = {
