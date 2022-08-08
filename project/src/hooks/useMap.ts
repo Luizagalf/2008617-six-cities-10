@@ -1,4 +1,4 @@
-import { useEffect, useState, MutableRefObject } from 'react';
+import { useEffect, useState, MutableRefObject, useRef } from 'react';
 import { Map, TileLayer } from 'leaflet';
 
 const useMap = (
@@ -7,9 +7,10 @@ const useMap = (
   zoom: number
 ): Map | null => {
   const [map, setMap] = useState<Map | null>(null);
+  const isRenderRef = useRef<boolean>(false);
 
   useEffect(() => {
-    if (mapRef.current !== null && map === null) {
+    if (mapRef.current !== null && map === null && !isRenderRef.current) {
       const instance = new Map(mapRef.current, {
         center,
         zoom
@@ -26,6 +27,7 @@ const useMap = (
       instance.addLayer(layer);
 
       setMap(instance);
+      isRenderRef.current = true;
     }
   }, [mapRef, map, center, zoom]);
 

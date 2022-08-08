@@ -49,12 +49,19 @@ const Map = ({ city, offers, selectedOffer }: MapProps) => {
           .addTo(map);
       });
     }
-  }, [map, offers]);
+  }, [map, offers, selectedOffer]);
 
-  return map ? (
-    <div style={{ height: '500px' }} ref={mapRef}></div>
-  ) : (
-    <div></div>
+  return (
+    <section
+      className="cities__map"
+      style={{
+        height: '100%',
+        width: '100%',
+        margin: '0 auto',
+        maxWidth: '1144px'
+      }}
+      ref={mapRef}
+    />
   );
 };
 
