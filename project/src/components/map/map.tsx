@@ -36,19 +36,20 @@ const Map = ({ city, offers, selectedOffer }: MapProps) => {
   useEffect(() => {
     let layer: LayerGroup;
     if (map) {
+      layer = new LayerGroup().addTo(map);
       offers.forEach((offer) => {
-        const marker = new Marker({
-          lat: offer.lat,
-          lng: offer.lng
-        });
-
-        marker
-          .setIcon(
-            selectedOffer !== undefined && offer.name === selectedOffer.name
-              ? currentCustomIcon
-              : defaultCustomIcon
-          )
-          .addTo(map);
+        new Marker(
+          {
+            lat: offer.lat,
+            lng: offer.lng
+          },
+          {
+            icon:
+              selectedOffer !== undefined && offer.id === selectedOffer.id
+                ? currentCustomIcon
+                : defaultCustomIcon
+          }
+        ).addTo(layer);
       });
 
       return () => {
