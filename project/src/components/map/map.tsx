@@ -4,6 +4,7 @@ import { useRef, useEffect } from 'react';
 import useMap from '../../hooks/useMap';
 import { URL_MARKER_DEFAULT, URL_MARKER_CURRENT } from '../../consts';
 import { City } from '../../types/city';
+import 'leaflet/dist/leaflet.css';
 
 type MapProps = {
   offers: Offer[];

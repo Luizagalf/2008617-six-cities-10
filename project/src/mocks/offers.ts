@@ -11,8 +11,8 @@ export const offers: Offer[] = [
     name: 'Beautiful &amp; luxurious apartment at great location',
     type: 'Apartment',
     city: 'Amsterdam',
-    lng: 52.3909553943508,
-    lat: 4.85309666406198
+    lng: 4.85309666406198,
+    lat: 52.3909553943508
   },
   {
     id: 2,
@@ -24,8 +24,8 @@ export const offers: Offer[] = [
     name: 'Wood and stone place',
     type: 'Private room',
     city: 'Amsterdam',
-    lng: 52.369553943508,
-    lat: 4.85309666406198
+    lng: 4.85309666406198,
+    lat: 52.369553943508
   },
   {
     id: 3,
@@ -37,8 +37,8 @@ export const offers: Offer[] = [
     name: 'Canal View Prinsengracht',
     type: 'Apartment',
     city: 'Amsterdam',
-    lng: 52.3909553943508,
-    lat: 4.929309666406198
+    lng: 4.929309666406198,
+    lat: 52.3909553943508
   },
   {
     id: 4,
@@ -50,8 +50,8 @@ export const offers: Offer[] = [
     name: 'Nice, cozy, warm big bed apartment',
     type: 'Apartment',
     city: 'Amsterdam',
-    lng: 52.3809553943508,
-    lat: 4.939309666406198
+    lng: 4.939309666406198,
+    lat: 52.3809553943508
   },
   {
     id: 5,
@@ -63,8 +63,8 @@ export const offers: Offer[] = [
     name: 'Wood and stone place',
     type: 'Apartment',
     city: 'Amsterdam',
-    lng: 52.3909553943508,
-    lat: 4.85309666406198
+    lng: 4.85309666406198,
+    lat: 52.3909553943508
   },
   {
     id: 6,
@@ -76,8 +76,8 @@ export const offers: Offer[] = [
     name: 'Nice, cozy, warm big bed apartment',
     type: 'Apartment',
     city: 'Cologne',
-    lng: 52.3909553943508,
-    lat: 4.85309666406198
+    lng: 4.85309666406198,
+    lat: 52.3909553943508
   },
   {
     id: 7,
@@ -89,7 +89,7 @@ export const offers: Offer[] = [
     name: 'Wood and stone place',
     type: 'Apartment',
     city: 'Cologne',
-    lng: 52.3909553943508,
-    lat: 4.85309666406198
+    lng: 4.85309666406198,
+    lat: 52.3909553943508
   }
 ];
