@@ -58,7 +58,6 @@ const Map = ({ city, offers, selectedOffer }: MapProps) => {
 
   return (
     <section
-      className="cities__map map"
       style={{
         height: '100%',
         width: '100%',
