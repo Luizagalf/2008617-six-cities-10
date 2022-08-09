@@ -6,13 +6,15 @@ import Favorites from '../../pages/favorites/favorites';
 import OfferPage from '../../pages/offer-page/offer-page';
 import Error from '../../pages/error/error';
 import { Offer } from '../../types/offer';
+import { Review } from '../../types/review';
 
 import { AppRoute } from '../../consts';
 
 type AppProps = {
   offers: Offer[];
+  reviews: Review[];
 };
-const App = ({ offers }: AppProps): JSX.Element => (
+const App = ({ offers, reviews }: AppProps): JSX.Element => (
   <BrowserRouter>
     <Routes>
       <Route path={AppRoute.Root} element={<Main offers={offers} />} />
@@ -25,7 +27,10 @@ const App = ({ offers }: AppProps): JSX.Element => (
           </PrivateRoute>
         }
       />
-      <Route path={AppRoute.OfferPage} element={<OfferPage />} />
+      <Route
+        path={AppRoute.OfferPage}
+        element={<OfferPage reviews={reviews} />}
+      />
       <Route path="*" element={<Error />} />
     </Routes>
   </BrowserRouter>
