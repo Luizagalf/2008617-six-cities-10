@@ -1,8 +1,8 @@
-import { Offer } from '../types/offer';
-import OfferCardsList from '../components/offer-cards-list/offer-cards-list';
-import Map from '../components/map/map';
-import { Amsterdam } from '../mocks/city';
-import { groupBy } from '../utils';
+import { Offer } from '../../types/offer';
+import OfferCardsList from '../../components/offer-cards-list/offer-cards-list';
+import Map from '../../components/map/map';
+import { Amsterdam } from '../../mocks/city';
+import { groupBy } from '../../utils';
 import { useState } from 'react';
 
 type MainProps = {

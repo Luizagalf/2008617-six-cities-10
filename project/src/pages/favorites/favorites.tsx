@@ -1,5 +1,5 @@
-import OfferCardsListFavorites from '../components/offer-cards-favoritesList/offer-cards-favoritesList';
-import { Offer } from '../types/offer';
+import OfferCardsListFavorites from '../../components/offer-cards-favoritesList/offer-cards-favoritesList';
+import { Offer } from '../../types/offer';
 
 type FavoritesProps = {
   offers: Offer[];

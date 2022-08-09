@@ -1,10 +1,10 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import PrivateRoute from '../private-route/private-route';
-import Main from '../../pages/main';
-import Login from '../../pages/login';
-import Favorites from '../../pages/favorites';
-import OfferPage from '../../pages/offer-page';
-import Error from '../../pages/error';
+import Main from '../../pages/main/main';
+import Login from '../../pages/login/login';
+import Favorites from '../../pages/favorites/favorites';
+import OfferPage from '../../pages/offer-page/offer-page';
+import Error from '../../pages/error/error';
 import { Offer } from '../../types/offer';
 
 import { AppRoute } from '../../consts';

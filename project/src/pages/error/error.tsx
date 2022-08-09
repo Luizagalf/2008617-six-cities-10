@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './error.css';
 
 const Error = (): JSX.Element => (
   <div className="page page--gray page--error">
