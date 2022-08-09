@@ -11,7 +11,7 @@ const OfferCardsList = ({ offers, onListItemHover }: OfferCardsListProps) => {
   const [selectedOffer, setSelectedOffer] = useState(0);
 
   return (
-    <div className="cities__places-list places__list tabs__content">
+    <div className="near-places__list places__list">
       {offers.map((offer: Offer) => (
         <div
           key={offer.id}

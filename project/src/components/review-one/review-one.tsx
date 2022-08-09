@@ -10,7 +10,7 @@ const ReviewOne = ({ review }: ReviewOneProps): JSX.Element => (
       <div className="reviews__avatar-wrapper user__avatar-wrapper">
         <img
           className="reviews__avatar user__avatar"
-          src={`img/${review['author']}`}
+          src={`img/${review['src']}`}
           width="54"
           height="54"
           alt="Reviews avatar"
